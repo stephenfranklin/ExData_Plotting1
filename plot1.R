@@ -13,3 +13,9 @@ View(power)
 power$datetime<-paste(power$Date,power$Time)
 power$datetime<-strptime(power$datetime,"%d/%m/%Y %H:%M")
 
+hist(power$Global_active_power,col="red",
+     main="Global Active Power",
+     xlab="Global Active Power (kilowatts)")
+
+dev.copy(png, file="plot1.png",width=480,height=480)
+dev.off()
