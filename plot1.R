@@ -9,7 +9,7 @@ cols<-c("Date","Time","Global_active_power","Global_reactive_power",
         "Sub_metering_2","Sub_metering_3")
 power <- read.table(file,header=T,sep=";",col.names=cols,
                     nrows=2880,skip=66636)
-View(power)
+#View(power)
 power$datetime<-paste(power$Date,power$Time)
 power$datetime<-strptime(power$datetime,"%d/%m/%Y %H:%M")
 
